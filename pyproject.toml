@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "aiolavalink"
+version = "1.0.0"
+description = "AIOLavalink is an asynchronous Lavalink client that allows for easy connection, managing, and control over your Lavalink nodes."
+authors = ["JacobMonck <jacobamonck@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+
+[tool.poetry.dev-dependencies]
+isort = "^5.10.1"
+black = "^22.3.0"
+taskipy = "^1.10.2"
+
+[tool.taskipy.tasks]
+lint = "black . && isort --profile black ."
+
+[tool.black]
+line-length = 120
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
